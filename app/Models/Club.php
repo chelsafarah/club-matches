@@ -19,4 +19,33 @@ class Club extends Model
         'updated_at',
 
     ];
+
+    public function stadium()
+    {
+        return $this->belongsTo(Stadium::class);
+    }
+
+    public function manager()
+    {
+        return $this->hasMany(Manager::class, 'clubs_id');
+    }
+
+    public function player()
+    {
+        return $this->hasMany(Player::class, 'clubs_id');
+    }
+
+    public function match_club()
+    {
+        return $this->hasOne(Matches::class, 'clubs_id');
+    }
+
+    public function match_rival()
+    {
+        return $this->hasOne(Matches::class, 'rivals_id');
+    }
+
+
+
+
 }

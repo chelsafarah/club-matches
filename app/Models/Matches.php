@@ -19,4 +19,14 @@ class Matches extends Model
         'updated_at',
 
     ];
+
+    public function club()
+    {
+        return $this->belongsTo(Club::class, 'clubs_id', 'id');
+    }
+
+    public function rival()
+    {
+        return $this->belongsTo(Club::class, 'rivals_id', 'id');
+    }
 }

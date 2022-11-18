@@ -19,4 +19,10 @@ class Stadium extends Model
         'updated_at',
 
     ];
+
+    //relation
+    public function club()
+    {
+        return $this->hasOne(Club::class);
+    }
 }

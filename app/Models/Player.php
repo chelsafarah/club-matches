@@ -18,4 +18,9 @@ class Player extends Model
         'updated_at',
 
     ];
+
+    public function club()
+    {
+        return $this->belongsTo(Club::class, 'clubs_id', 'id');
+    }
 }

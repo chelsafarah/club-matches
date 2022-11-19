@@ -17,10 +17,6 @@ class MatchesSeeder extends Seeder
      */
     public function run()
     {
-        //truncate db
-        Schema::disableForeignKeyConstraints();
-        DB::table('matches')->truncate();
-        Schema::enableForeignKeyConstraints();
 
         $matches = [
             [

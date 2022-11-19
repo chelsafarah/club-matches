@@ -17,10 +17,6 @@ class ManagerSeeder extends Seeder
      */
     public function run()
     {
-        //truncate db
-        Schema::disableForeignKeyConstraints();
-        DB::table('managers')->truncate();
-        Schema::enableForeignKeyConstraints();
 
         $managers = [
             [

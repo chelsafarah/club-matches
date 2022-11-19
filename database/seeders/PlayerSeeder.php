@@ -17,10 +17,6 @@ class PlayerSeeder extends Seeder
      */
     public function run()
     {
-        //truncate db
-        Schema::disableForeignKeyConstraints();
-        DB::table('players')->truncate();
-        Schema::enableForeignKeyConstraints();
 
         $players = [
             [

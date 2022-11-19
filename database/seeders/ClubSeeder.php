@@ -17,9 +17,6 @@ class ClubSeeder extends Seeder
      */
     public function run()
     {
-        Schema::disableForeignKeyConstraints();
-        DB::table('clubs')->truncate();
-        Schema::enableForeignKeyConstraints();
 
         $clubs = [
             [

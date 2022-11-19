@@ -17,10 +17,6 @@ class StadiumSeeder extends Seeder
      */
     public function run()
     {
-        //truncate db
-        Schema::disableForeignKeyConstraints();
-        DB::table('stadiums')->truncate();
-        Schema::enableForeignKeyConstraints();
 
         $stadiums = [
             [

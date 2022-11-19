@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.landing-page.index');
-});
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/clubs', [HomeController::class, 'club'])->name('clubs');
+Route::get('/managers', [HomeController::class, 'manager'])->name('managers');
+Route::get('/players', [HomeController::class, 'player'])->name('players');
+Route::get('/stadiums', [HomeController::class, 'stadium'])->name('stadiums');

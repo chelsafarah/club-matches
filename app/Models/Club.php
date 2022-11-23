@@ -20,7 +20,7 @@ class Club extends Model
 
     ];
 
-    public function stadium()
+    public function stadiums()
     {
         return $this->belongsTo(Stadium::class);
     }
@@ -42,7 +42,7 @@ class Club extends Model
 
     public function match_rival()
     {
-        return $this->hasOne(Matches::class, 'rivals_id');
+        return $this->hasOne(Matches::class, 'clubs_id');
     }
 
 

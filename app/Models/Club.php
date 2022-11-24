@@ -22,7 +22,7 @@ class Club extends Model
 
     public function stadiums()
     {
-        return $this->belongsTo(Stadium::class);
+        return $this->belongsTo(Stadium::class, 'stadiums_id', 'id');
     }
 
     public function manager()

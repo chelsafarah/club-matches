@@ -23,6 +23,6 @@ class Stadium extends Model
     //relation
     public function club()
     {
-        return $this->hasOne(Club::class);
+        return $this->hasOne(Club::class, 'stadiums_id');
     }
 }

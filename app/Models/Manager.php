@@ -11,6 +11,7 @@ class Manager extends Model
 
     protected $fillable = [
         'clubs_id',
+        'photo',
         'name',
         'old',
         'nationality',

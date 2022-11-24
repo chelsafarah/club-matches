@@ -36,23 +36,23 @@
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <div class="flex items-center">
                                             <div class="flex-shrink-0 h-10 w-10">
-                                                <img class="h-10 w-10 rounded-full" src="{{ url($player->photo) }}" alt="{{ 'photo of'.$player->name }}">
+                                                <img class="h-10 w-10 rounded-full" src="{{ $player->photo ?? '' }}" alt="{{ 'photo of'.$player->name ?? ''}}">
                                             </div>
                                             <div class="ml-4">
                                                 <div class="text-sm font-medium text-gray-900">
-                                                    {{ $player->name }}
+                                                    {{ $player->name ?? ''}}
                                                 </div>
                                                 <div class="text-sm text-gray-500">
-                                                    {{ $player->height }}
+                                                    {{ $player->height?? '' }}
                                                 </div>
                                             </div>
                                         </div>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        {{ $player->club->name }}
+                                        {{ $player->club->name ?? ''}}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        {{ $player->position }}
+                                        {{ $player->position ?? ''}}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                         <a href="#" class="text-indigo-600 hover:text-indigo-900">Detail</a>

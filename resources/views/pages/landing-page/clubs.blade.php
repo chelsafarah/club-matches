@@ -37,35 +37,35 @@
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <div class="flex items-center">
                                             <div class="flex-shrink-0 h-10 w-10">
-                                                <img class="h-10 w-10 rounded-full" src="{{ $club->logo }}" alt="{{ 'photo of'.$club->name }}">
+                                                <img class="h-10 w-10 rounded-full" src="{{ $club->logo ?? ''}}" alt="{{ 'photo of'.$club->name ?? ''}}">
                                             </div>
                                             <div class="ml-4">
                                                 <div class="text-sm font-medium text-gray-900">
-                                                    {{ $club->name }}
+                                                    {{ $club->name ?? ''}}
                                                 </div>
                                                 <div class="text-sm text-gray-500">
-                                                    {{ $club->url }}
+                                                    {{ $club->url ?? ''}}
                                                 </div>
                                             </div>
                                         </div>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        {{ $club->stadiums->name }}
+                                        {{ $club->stadiums->name ?? ''}}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        {{ $club->thropy }}
+                                        {{ $club->thropy ?? ''}}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <div class="flex items-center">
                                             <div class="flex-shrink-0 h-10 w-10">
-                                                <img class="h-10 w-10 rounded-full" src="{{ $club->match_rival->rival->logo }}" alt="">
+                                                <img class="h-10 w-10 rounded-full" src="{{ $club->match_rival->rival->logo ?? ''}}" alt="">
                                             </div>
                                             <div class="ml-4">
                                                 <div class="text-sm font-medium text-gray-900">
-                                                    {{ $club->match_rival->rival->name }}
+                                                    {{ $club->match_rival->rival->name ?? ''}}
                                                 </div>
                                                 <div class="text-sm text-gray-500">
-                                                    {{ $club->match_rival->rival->url }}
+                                                    {{ $club->match_rival->rival->url ?? ''}}
                                                 </div>
                                             </div>
                                         </div>

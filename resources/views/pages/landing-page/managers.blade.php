@@ -36,23 +36,23 @@
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <div class="flex items-center">
                                             <div class="flex-shrink-0 h-10 w-10">
-                                                <img class="h-10 w-10 rounded-full" src="{{ url($manager->photo) }}" alt="{{ 'photo of'.$manager->name }}">
+                                                <img class="h-10 w-10 rounded-full" src="{{ $manager->photo ?? ''}}" alt="{{ 'photo of'.$manager->name }}">
                                             </div>
                                             <div class="ml-4">
                                                 <div class="text-sm font-medium text-gray-900">
-                                                    {{ $manager->name }}
+                                                    {{ $manager->name ?? ''}}
                                                 </div>
                                                 <div class="text-sm text-gray-500">
-                                                    {{ $manager->old }} Years
+                                                    {{ $manager->old. ' Years' ?? ''}}
                                                 </div>
                                             </div>
                                         </div>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        {{ $manager->club->name }}
+                                        {{ $manager->club->name ?? ''}}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        {{ $manager->nationality }}
+                                        {{ $manager->nationality ?? ''}}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                         <a href="#" class="text-indigo-600 hover:text-indigo-900">Detail</a>

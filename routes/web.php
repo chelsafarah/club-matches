@@ -16,3 +16,6 @@ use App\Http\Controllers\LandingPageController;
 
 Route::get('/',[LandingPageController::class, 'index']);
 Route::get('/clubs',[LandingPageController::class, 'clubs']);
+Route::get('/managers',[LandingPageController::class, 'managers']);
+Route::get('/players',[LandingPageController::class, 'players']);
+Route::get('/stadiums',[LandingPageController::class, 'stadiums']);
